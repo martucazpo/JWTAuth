@@ -37,7 +37,7 @@ app.delete('/logout', (req,res) => {
 })
 
 function generateAccessToken(user) {
-    return jwt.sign(user, process.env.ACCESS_TOKEN_SECRET,{expiresIn: '15s'})
+    return jwt.sign(user, process.env.ACCESS_TOKEN_SECRET,{expiresIn: '20s'})
 }
 
 app.listen(PORT,() => console.log('Now listening on port ' + PORT + '!'))
